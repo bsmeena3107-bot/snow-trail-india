@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Gallery | SnowTrail India</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+
+body{
+  background:
+   linear-gradient(rgba(2,6,23,.6),rgba(2,6,23,.75)),
+   url("https://images.unsplash.com/photo-1501785888041-af3ef285b470");
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
+  color:#e5e7eb;
+}
+
+/* NAV */
+nav{
+  display:flex;
+  justify-content:center;
+  padding:25px;
+  background:rgba(2,6,23,.6);
+  backdrop-filter:blur(10px);
+}
+nav a{
+  margin:0 16px;
+  padding:12px 30px;
+  border-radius:40px;
+  text-decoration:none;
+  font-weight:600;
+  color:#e5e7eb;
+  background:rgba(255,255,255,.08);
+}
+
+/* PAGE */
+section{padding:100px 40px}
+h1{text-align:center;font-size:52px;margin-bottom:20px}
+p{text-align:center;color:#cbd5f5;margin-bottom:60px}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+
+.card{
+  background:rgba(255,255,255,.08);
+  border-radius:25px;
+  overflow:hidden;
+  box-shadow:0 30px 70px rgba(0,0,0,.6);
+  transition:.4s;
+}
+.card:hover{transform:translateY(-10px)}
+
+.photo{
+  height:220px;
+  background:#111827;
+}
+.photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.card h3{
+  padding:20px;
+  text-align:center;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="trips.html">Trip Plan</a>
+  <a href="places.html">Places</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="rules.html">Rules</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<section>
+<h1>Travel Gallery</h1>
+<p>Experience India through our journeys</p>
+
+<div class="grid">
+  <div class="card"><div class="photo"><img src="https://th.bing.com/th/id/OIP.xVGNijNbAmONUn0xd_TKzAHaFj?w=223&h=180&c=7&r=0&o=7&dpr=1.6&pid=1.7&rm=3"></div><h3>Delhi Heritage</h3></div>
+  <div class="card"><div class="photo"><img src="https://tse2.mm.bing.net/th/id/OIP.SIh4PIZML4GvlfGY2AcrbQHaEW?rs=1&pid=ImgDetMain&o=7&rm=3"></div><h3>Agra – Taj Mahal</h3></div>
+  <div class="card"><div class="photo"><img src="https://th.bing.com/th/id/OIP.XPgcUhegMJrVnToaU5-IwQHaEK?w=284&h=180&c=7&r=0&o=7&dpr=1.6&pid=1.7&rm=3"></div><h3>Jaipur Forts</h3></div>
+  <div class="card"><div class="photo"><img src="https://www.visittnt.com/images/goa/goa-beaches-500.jpg"></div><h3>Goa Beaches</h3></div>
+  <div class="card"><div class="photo"><img src="https://www.summitsafari.com/assets/img/tour-gal/shimla-manali-winter-special-tour-package/enjoy-with-your-family-and-loved-ones-shimla-manali-winter-holiday-tour-package-1.jpg"></div><h3>Manali</h3></div>
+ 
+  <div class="card"><div class="photo"><img src="https://campinginrishikesh.in/wp-content/uploads/2017/02/200-hours-hatha-yoga-teacher-trainin-india.jpg"></div><h3>Manali</h3></div>
+  <div class="card"><div class="photo"><img src="https://i.pinimg.com/originals/69/1e/7d/691e7d144316888c6274bfe213ff2565.jpg"></div><h3>Darjeeling Snow</h3></div>
+</div>
+</section>
+
+</body>
+</html>
