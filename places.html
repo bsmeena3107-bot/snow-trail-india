@@ -3,56 +3,203 @@
 <head>
 <meta charset="UTF-8">
 <title>Famous Places | SnowTrail India</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
 <style>
-body{font-family:Poppins,sans-serif;background: #4C6B4C;;margin:0}
-section{padding:70px}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:
+    linear-gradient(rgba(2,6,23,.7),rgba(2,6,23,.9)),
+    url("https://images.unsplash.com/photo-1501785888041-af3ef285b470");
+  background-size:cover;
+  background-position:center;
+  color:#fff;
+  overflow-x:hidden;
+}
+
+/* ================= NAVBAR ================= */
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index:100;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:8px;
+  padding:12px;
+  background:rgba(2,6,23,.75);
+  backdrop-filter:blur(12px);
+}
+
+nav a{
+  padding:8px 14px;
+  border-radius:30px;
+  background:rgba(255,255,255,.15);
+  color:#fff;
+  text-decoration:none;
+  font-size:13px;
+  font-weight:600;
+  transition:.3s;
+}
+
+nav a:hover{
+  background:#38bdf8;
+  color:#020617;
+}
+
+/* ================= SECTION ================= */
+section{
+  padding:130px 16px 70px;
+}
+
+h2{
+  text-align:center;
+  font-size:34px;
+  margin-bottom:40px;
+}
+
+/* ================= GRID ================= */
 .grid{
- display:grid;
- grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
- gap:30px;
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
 }
+
+/* ================= CARD ================= */
 .card{
- background:#f1f5f9;
- padding:20px;
- border-radius:20px;
+  background:rgba(255,255,255,.12);
+  backdrop-filter:blur(10px);
+  padding:18px;
+  border-radius:20px;
+  text-align:center;
+  transition:.3s;
 }
+
+.card:hover{
+  transform:translateY(-6px);
+}
+
 .photo{
- height:160px;
- background:#cbd5e1;
- border-radius:14px;
- overflow:hidden;
- margin-bottom:15px;
+  height:170px;
+  border-radius:14px;
+  overflow:hidden;
+  margin-bottom:14px;
 }
-.photo img{width:100%;height:100%;object-fit:cover}
+
+.photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.card h3{
+  font-size:18px;
+  margin-top:6px;
+}
+
+/* ================= MOBILE FIX ================= */
+@media(max-width:768px){
+
+  h2{
+    font-size:26px;
+  }
+
+  section{
+    padding-top:150px;
+  }
+
+  .photo{
+    height:160px;
+  }
+}
 </style>
 </head>
 
 <body>
 
-<section>
-    <nav>
+<!-- NAV -->
+<nav>
   <a href="index.html">Home</a>
   <a href="trips.html">Trip Plan</a>
- 
+  <a href="places.html">Places</a>
   <a href="gallery.html">Gallery</a>
   <a href="rules.html">Rules</a>
   <a href="contact.html">Contact</a>
 </nav>
-<h2>Famous Places</h2>
 
-<div class="grid">
-<div class="card"><div class="photo"><img src="https://tse3.mm.bing.net/th/id/OIP.1fwz0uulbT0XaAPIeREVIwHaEy?w=3248&h=2097&rs=1&pid=ImgDetMain&o=7&rm=3"></div><h3>Taj Mahal</h3></div>
-<div class="card"><div class="photo"><img src="https://lp-cms-production.imgix.net/image_browser/Querim_beach_Goa.jpg?auto=format&q=40&ar=16:9&fit=crop&w=6380"></div><h3>Goa Beaches</h3></div>
-<div class="card"><div class="photo"><img src="https://www.tripsavvy.com/thmb/P-vBKShJXcsDT_5m-IF2xSMQ8q0=/3600x2400/filters:fill(auto,1)/GettyImages-522478216-5ab12c4e3de4230036949cee.jpg"></div><h3>Kerala Backwaters</h3></div>
+<section>
+  <h2>Famous Places in India</h2>
 
-<div class="card"><div class="photo"><img src="https://tse2.mm.bing.net/th/id/OIP.JRwu95b6i6VIMXXB4aOEKAHaD4?rs=1&pid=ImgDetMain&o=7&rm=3"></div><h3>Jaipur forts</h3></div>
-<div class="card"><div class="photo"><img src="https://thumbs.dreamstime.com/b/beautiful-snow-mountains-scene-himachal-pradesh-solang-valley-manali-near-rohtang-pass-india-covered-255644942.jpg"></div><h3>Manali Snow</h3></div>
-<div class="card"><div class="photo"><img src="https://cdn.britannica.com/91/110191-050-7BCFD56B/Victoria-Memorial-Hall-Kolkata-India.jpg"></div><h3>Kolkata</h3></div>
-<div class="card"><div class="photo"><img src="https://th.bing.com/th/id/R.f2257da2442701aba39349eb1128cc2a?rik=H%2fq3tvjE5DCHDA&riu=http%3a%2f%2frishikesh.net%2fwp-content%2fuploads%2f2019%2f11%2fbigstock-Rishikesh-India-Circa-April-329638714.jpg&ehk=Uptj5ZNmgYbgnXdTnXB21UeyOAYxRd7N2uJYsT4MWHM%3d&risl=1&pid=ImgRaw&r=0"></div><h3>Rishikesh</h3></div>
-<div class="card"><div class="photo"><img src="https://tse3.mm.bing.net/th/id/OIP.voPFrmZiD0w_rcdVDa-7WQHaEg?rs=1&pid=ImgDetMain&o=7&rm=3"></div><h3>Gateway of india</h3></div>
+  <div class="grid">
 
-</div>
+    <div class="card">
+      <div class="photo">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.1fwz0uulbT0XaAPIeREVIwHaEy" />
+      </div>
+      <h3>Taj Mahal</h3>
+    </div>
 
+    <div class="card">
+      <div class="photo">
+        <img src="https://lp-cms-production.imgix.net/image_browser/Querim_beach_Goa.jpg" />
+      </div>
+      <h3>Goa Beaches</h3>
+    </div>
+
+    <div class="card">
+      <div class="photo">
+        <img src="https://www.tripsavvy.com/thmb/P-vBKShJXcsDT_5m-IF2xSMQ8q0=/3600x2400" />
+      </div>
+      <h3>Kerala Backwaters</h3>
+    </div>
+
+    <div class="card">
+      <div class="photo">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.JRwu95b6i6VIMXXB4aOEKAHaD4" />
+      </div>
+      <h3>Jaipur Forts</h3>
+    </div>
+
+    <div class="card">
+      <div class="photo">
+        <img src="https://thumbs.dreamstime.com/b/beautiful-snow-mountains-scene-himachal-pradesh-solang-valley-manali-near-rohtang-pass-india-covered-255644942.jpg" />
+      </div>
+      <h3>Manali Snow</h3>
+    </div>
+
+    <div class="card">
+      <div class="photo">
+        <img src="https://cdn.britannica.com/91/110191-050-7BCFD56B/Victoria-Memorial-Hall-Kolkata-India.jpg" />
+      </div>
+      <h3>Kolkata</h3>
+    </div>
+
+    <div class="card">
+      <div class="photo">
+        <img src="https://th.bing.com/th/id/R.f2257da2442701aba39349eb1128cc2a" />
+      </div>
+      <h3>Rishikesh</h3>
+    </div>
+
+    <div class="card">
+      <div class="photo">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.voPFrmZiD0w_rcdVDa-7WQHaEg" />
+      </div>
+      <h3>Gateway of India</h3>
+    </div>
+
+  </div>
 </section>
 
 </body>
