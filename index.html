@@ -115,7 +115,90 @@ footer{
   padding:50px;
   text-align:center;
   color:#475569;
+}/* =========================
+   FULL HERO GRAPHICS (MOBILE)
+========================= */
+
+.hero{
+  position:relative;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:120px 20px;
+  background:
+    url("https://images.unsplash.com/photo-1501785888041-af3ef285b470")
+    center/cover no-repeat;
 }
+
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    rgba(2,6,23,.55),
+    rgba(2,6,23,.85)
+  );
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  max-width:700px;
+  color:#fff;
+}
+
+.hero h1{
+  font-size:42px;
+  line-height:1.2;
+}
+
+.hero h1 span{
+  color:#38bdf8;
+}
+
+.hero p{
+  margin:18px 0 26px;
+  font-size:16px;
+  color:#e5e7eb;
+}
+
+/* GRAPHICS GRID */
+.hero-graphics{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:14px;
+  margin-bottom:28px;
+}
+
+.glass-card{
+  padding:18px;
+  border-radius:18px;
+  background:rgba(255,255,255,.18);
+  backdrop-filter:blur(10px);
+  font-size:15px;
+  font-weight:600;
+  box-shadow:0 15px 40px rgba(0,0,0,.4);
+}
+
+/* CTA */
+.btn{
+  display:inline-block;
+  padding:16px 40px;
+  border-radius:40px;
+  background:linear-gradient(90deg,#2563eb,#38bdf8);
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+}
+
+/* MOBILE TWEAK */
+@media(max-width:768px){
+  .hero h1{
+    font-size:34px;
+  }
+}
+
 </style>
 </head>
 
@@ -132,41 +215,24 @@ footer{
 </nav>
 
 <!-- HERO -->
-<header>
-  <div>
+<h<section class="hero">
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
     <h1>Explore India <span>From Delhi</span></h1>
-    <h2>Snow • Mountains • Heritage • Beaches • Premium Travel</h2>
-    <a href="trips.html" class="btn">View Trip Plan</a>
+    <p>Custom Tour Plans • Trusted Travel Experts • Best Prices</p>
+
+    <div class="hero-graphics">
+      <div class="glass-card">🏔️ Hill Trips</div>
+      <div class="glass-card">🏖️ Beach Tours</div>
+      <div class="glass-card">🏰 Heritage</div>
+      <div class="glass-card">❄️ Snow Destinations</div>
+    </div>
+
+    <a href="/trips" class="btn">View Trip Plan</a>
   </div>
-  
-</header>
-  <div class="hero-extras">
+</section>
 
-  <div class="badges">
-    <span>⭐ 4.9 Rated</span>
-    <span>👥 2k+ Travelers</span>
-    <span>🕒 3–5 Days Delivery</span>
-  </div>
-
-  <div class="quick-routes">
-    <span>Delhi → Manali</span>
-    <span>Delhi → Jaipur</span>
-    <span>Delhi → Goa</span>
-    <span>Delhi → Kerala</span>
-  </div>
-
-</div>
-
-
-<!-- SECTION 1 -->
-<section>
-  <div class="section-box">
-    <h2>Premium India Travel Experience</h2>
-    <p>
-      Discover hand-crafted travel plans starting from Delhi covering
-      North, West, South & East India with comfort, safety and luxury.
-    </p>
-  </div>
 </section>
 
 <!-- SECTION 2 -->
@@ -235,5 +301,6 @@ footer{
 
 </body>
 </html>
+
 
 
