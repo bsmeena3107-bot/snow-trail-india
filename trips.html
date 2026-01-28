@@ -90,6 +90,74 @@ footer{
   padding:40px;
   color:#475569;
 }
+  /* =========================
+   TRIPS PAGE – MOBILE FIX
+========================= */
+
+@media (max-width: 768px){
+
+  /* Page padding */
+  body{
+    overflow-x:hidden;
+  }
+
+  section{
+    padding:50px 20px !important;
+  }
+
+  /* Timeline container */
+  .route{
+    padding-left:0 !important;
+    border-left:none !important;
+  }
+
+  /* Each stop card */
+  .stop{
+    padding-left:0 !important;
+    margin-bottom:30px;
+  }
+
+  /* Timeline dots hide */
+  .stop::before{
+    display:none;
+  }
+
+  /* Cards full width */
+  .stop-card,
+  .card,
+  .route-box{
+    width:100% !important;
+    max-width:100% !important;
+  }
+
+  /* Text size fix */
+  .stop h3{
+    font-size:20px !important;
+  }
+
+  .stop p{
+    font-size:15px !important;
+  }
+
+  /* Price text */
+  .price{
+    font-size:16px !important;
+  }
+
+  /* Images fit */
+  img{
+    max-width:100%;
+    height:auto;
+  }
+
+  /* Buttons */
+  .btn,
+  .whatsapp-btn{
+    width:100%;
+    text-align:center;
+  }
+}
+
 </style>
 </head>
 
@@ -176,4 +244,5 @@ NOTE: Tour will start from Delhi.
 
 </body>
 </html>
+
 
