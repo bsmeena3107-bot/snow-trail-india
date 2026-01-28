@@ -2,99 +2,207 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Tour Rules | SnowTrail India</title>
+<title>Tour Rules & Conditions | SnowTrail India</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- SEO -->
+<meta name="description" content="SnowTrail India tour rules and conditions. Booking policy, cancellation rules, pricing terms and travel safety guidelines.">
+<meta name="keywords" content="SnowTrail India rules, tour rules India, travel policy, booking conditions">
+<meta name="author" content="SnowTrail India">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
 
 body{
   background:
-   linear-gradient(rgba(2,6,23,.6),rgba(2,6,23,.8)),
-   url("https://images.unsplash.com/photo-1519681393784-d120267933ba");
+    linear-gradient(rgba(2,6,23,.7),rgba(2,6,23,.9)),
+    url("https://images.unsplash.com/photo-1519681393784-d120267933ba");
   background-size:cover;
   background-position:center;
   background-attachment:fixed;
   color:#e5e7eb;
+  overflow-x:hidden;
 }
 
-/* NAV */
+/* ================= NAVBAR ================= */
 nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index:100;
   display:flex;
   justify-content:center;
-  padding:25px;
-  background:rgba(2,6,23,.65);
-  backdrop-filter:blur(10px);
-}
-nav a{
-  margin:0 16px;
-  padding:12px 30px;
-  border-radius:40px;
-  text-decoration:none;
-  font-weight:600;
-  color:#e5e7eb;
-  background:rgba(255,255,255,.08);
+  flex-wrap:wrap;
+  gap:10px;
+  padding:14px;
+  background:rgba(2,6,23,.75);
+  backdrop-filter:blur(12px);
 }
 
-/* CONTENT */
-section{
-  padding:100px 40px;
+nav a{
+  padding:10px 18px;
+  border-radius:30px;
+  background:rgba(255,255,255,.12);
+  color:#fff;
+  text-decoration:none;
+  font-size:14px;
+  font-weight:600;
+  transition:.3s;
 }
+
+nav a:hover,
+nav a.active{
+  background:#38bdf8;
+  color:#020617;
+}
+
+/* ================= SECTION ================= */
+section{
+  padding:170px 16px 90px;
+}
+
 .box{
   max-width:900px;
   margin:auto;
-  background:rgba(255,255,255,.08);
-  backdrop-filter:blur(12px);
-  padding:60px;
-  border-radius:30px;
-  box-shadow:0 40px 90px rgba(0,0,0,.6);
+  background:rgba(255,255,255,.1);
+  backdrop-filter:blur(14px);
+  padding:50px;
+  border-radius:28px;
+  box-shadow:0 40px 90px rgba(0,0,0,.65);
 }
+
+/* ================= HEADING ================= */
 h1{
-  font-size:48px;
   text-align:center;
-  margin-bottom:40px;
+  font-size:44px;
+  margin-bottom:30px;
 }
+
+h3{
+  margin:30px 0 15px;
+  color:#38bdf8;
+  font-size:20px;
+}
+
+/* ================= LIST ================= */
 ul{
-  line-height:1.9;
-  font-size:18px;
-  color:#cbd5f5;
+  list-style:none;
+  line-height:1.8;
+  font-size:17px;
+  color:#dbeafe;
 }
-li{margin-bottom:12px}
+
+li{
+  margin-bottom:14px;
+  padding-left:28px;
+  position:relative;
+}
+
+li::before{
+  content:"✔";
+  position:absolute;
+  left:0;
+  color:#38bdf8;
+  font-weight:700;
+}
+
+/* ================= FOOTER ================= */
+footer{
+  text-align:center;
+  padding:22px;
+  font-size:14px;
+  color:#94a3b8;
+  background:rgba(2,6,23,.85);
+}
+
+/* ================= MOBILE FIX ================= */
+@media(max-width:768px){
+
+  h1{
+    font-size:28px;
+  }
+
+  h3{
+    font-size:18px;
+  }
+
+  .box{
+    padding:28px 20px;
+    border-radius:22px;
+  }
+
+  ul{
+    font-size:15px;
+  }
+
+  nav a{
+    font-size:13px;
+    padding:8px 14px;
+  }
+
+  section{
+    padding-top:180px;
+  }
+}
 </style>
 </head>
 
 <body>
 
+<!-- NAV -->
 <nav>
   <a href="index.html">Home</a>
   <a href="trips.html">Trip Plan</a>
   <a href="places.html">Places</a>
   <a href="gallery.html">Gallery</a>
-  <a href="rules.html">Rules</a>
+  <a href="rules.html" class="active">Rules</a>
   <a href="contact.html">Contact</a>
 </nav>
 
+<!-- CONTENT -->
 <section>
-<div class="box">
-<h1>Tour Rules & Conditions</h1>
+  <div class="box">
 
-<ul>
-  <li>All tour prices are subject to availability and seasonal changes.</li>
-  <li>Advance booking is mandatory to confirm any tour plan.</li>
-  <li>Prices marked as *** will be disclosed after enquiry.</li>
-  <li>Travelers must carry valid ID proof during the journey.</li>
-  <li>Hotel check-in and check-out times are as per hotel policy.</li>
-  <li>Any personal expenses are not included in the package.</li>
-  <li>SnowTrail India is not responsible for delays due to weather.</li>
-  <li>Cancellations will follow company cancellation policy.</li>
-  <li>Safety instructions provided by the tour guide must be followed.</li>
-  <li>Company reserves the right to modify the itinerary if required.</li>
-</ul>
+    <h1>Tour Rules & Conditions</h1>
 
-</div>
+    <h3>Booking & Pricing Policy</h3>
+    <ul>
+      <li>All tour prices are subject to availability and seasonal changes.</li>
+      <li>Advance booking is mandatory to confirm any tour plan.</li>
+      <li>Prices marked as *** will be disclosed after enquiry.</li>
+      <li>Full or partial payment may be required before tour confirmation.</li>
+      <li>Any additional cost due to changes will be informed in advance.</li>
+    </ul>
+
+    <h3>Travel & Stay Guidelines</h3>
+    <ul>
+      <li>Travelers must carry valid government ID proof during the journey.</li>
+      <li>Hotel check-in and check-out times are as per hotel policy.</li>
+      <li>Personal expenses are not included in the tour package.</li>
+      <li>Itinerary may change due to weather or local conditions.</li>
+    </ul>
+
+    <h3>Safety & Cancellation</h3>
+    <ul>
+      <li>SnowTrail India is not responsible for delays caused by weather or transport.</li>
+      <li>Cancellations will follow company cancellation policy.</li>
+      <li>Safety instructions provided by the tour guide must be followed.</li>
+      <li>The company reserves the right to modify or cancel tours if required.</li>
+    </ul>
+
+  </div>
 </section>
+
+<footer>
+  © 2026 SnowTrail India. All Rights Reserved.
+</footer>
 
 </body>
 </html>
