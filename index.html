@@ -2,305 +2,225 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>SnowTrail India | Premium Trips From Delhi</title>
+<title>SnowTrail India | Explore India From Delhi</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-
-/* BACKGROUND */
-body{
-  background:
-   linear-gradient(rgba(2,6,23,.45), rgba(2,6,23,.65)),
-   url("https://images.unsplash.com/photo-1501785888041-af3ef285b470");
-  background-size:cover;
-  background-position:center;
-  background-attachment:fixed;
-  color:#e5e7eb;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
 }
 
-
-/* NAVBAR */
+/* =====================
+   NAVBAR
+===================== */
 nav{
-  position:sticky;
+  position:fixed;
   top:0;
-  z-index:1000;
+  width:100%;
+  z-index:50;
   display:flex;
   justify-content:center;
-  padding:25px;
-  background:rgba(255,255,255,.75);
-  backdrop-filter:blur(12px);
+  gap:12px;
+  padding:12px;
+  background:rgba(2,6,23,.55);
+  backdrop-filter:blur(10px);
 }
 
 nav a{
-  margin:0 18px;
-  padding:14px 32px;
-  border-radius:40px;
+  padding:10px 18px;
+  border-radius:30px;
+  background:rgba(255,255,255,.15);
+  color:#fff;
   text-decoration:none;
+  font-size:14px;
   font-weight:600;
-  font-size:18px;
-  color:#0f172a;
-  background:rgba(255,255,255,.9);
-  box-shadow:0 10px 30px rgba(0,0,0,.15);
-  transition:.3s;
 }
 
-nav a:hover{
-  background:#2563eb;
-  color:white;
-  transform:translateY(-3px);
-}
-
-/* HERO */
-header{
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:40px;
-}
-
-header h1{
-  font-size:64px;
-}
-header span{color:#2563eb}
-header p{
-  font-size:22px;
-  color:#334155;
-  margin:20px 0 35px;
-}
-
-.btn{
-  display:inline-block;
-  padding:16px 42px;
-  font-size:18px;
-  background:#2563eb;
-  color:white;
-  border-radius:40px;
-  text-decoration:none;
-  box-shadow:0 15px 40px rgba(37,99,235,.5);
-}
-
-/* EXTRA SECTIONS */
-section{
-  padding:100px 60px;
-}
-
-.section-box{
-  max-width:1000px;
-  margin:auto;
-  background:rgba(255,255,255,.85);
-  backdrop-filter:blur(14px);
-  border-radius:35px;
-  padding:70px;
-  box-shadow:0 40px 90px rgba(0,0,0,.2);
-  text-align:center;
-}
-
-.section-box h2{
-  font-size:42px;
-  color:136, 207, 219;
-}
-.section-box p{
-  margin-top:20px;
-  font-size:20px;
-  color:#475569;
-}
-
-/* FOOTER */
-footer{
-  padding:50px;
-  text-align:center;
-  color:#475569;
-}/* =========================
-   FULL HERO GRAPHICS (MOBILE)
-========================= */
-
+/* =====================
+   HERO SECTION
+===================== */
 .hero{
   position:relative;
   min-height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  padding:140px 20px 80px;
   text-align:center;
-  padding:120px 20px;
   background:
-    url("https://images.unsplash.com/photo-1501785888041-af3ef285b470")
-    center/cover no-repeat;
-}
-
-.hero-overlay{
-  position:absolute;
-  inset:0;
-  background:linear-gradient(
-    rgba(2,6,23,.55),
-    rgba(2,6,23,.85)
-  );
-}
-
-.hero-content{
-  position:relative;
-  z-index:2;
-  max-width:700px;
+    linear-gradient(rgba(2,6,23,.55),rgba(2,6,23,.85)),
+    url("https://images.unsplash.com/photo-1501785888041-af3ef285b470");
+  background-size:cover;
+  background-position:center;
+  overflow:hidden;
   color:#fff;
 }
 
+/* HERO CONTENT */
 .hero h1{
   font-size:42px;
   line-height:1.2;
 }
-
 .hero h1 span{
   color:#38bdf8;
 }
 
 .hero p{
-  margin:18px 0 26px;
+  margin:16px 0 26px;
   font-size:16px;
   color:#e5e7eb;
-}
-
-/* GRAPHICS GRID */
-.hero-graphics{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:14px;
-  margin-bottom:28px;
-}
-
-.glass-card{
-  padding:18px;
-  border-radius:18px;
-  background:rgba(255,255,255,.18);
-  backdrop-filter:blur(10px);
-  font-size:15px;
-  font-weight:600;
-  box-shadow:0 15px 40px rgba(0,0,0,.4);
 }
 
 /* CTA */
 .btn{
   display:inline-block;
-  padding:16px 40px;
+  padding:14px 36px;
   border-radius:40px;
   background:linear-gradient(90deg,#2563eb,#38bdf8);
   color:#fff;
-  text-decoration:none;
   font-weight:600;
+  text-decoration:none;
 }
 
-/* MOBILE TWEAK */
+/* =====================
+   FLOATING MAP LINES
+===================== */
+.map-lines span{
+  position:absolute;
+  width:120px;
+  height:120px;
+  border:2px dashed rgba(56,189,248,.4);
+  border-radius:50%;
+  animation:spin 20s linear infinite;
+}
+
+.map-lines span:nth-child(1){
+  top:20%;
+  left:10%;
+}
+.map-lines span:nth-child(2){
+  bottom:25%;
+  right:12%;
+  width:160px;
+  height:160px;
+  animation-duration:30s;
+}
+
+@keyframes spin{
+  from{transform:rotate(0deg)}
+  to{transform:rotate(360deg)}
+}
+
+/* =====================
+   CLOUDS / SNOW
+===================== */
+.cloud{
+  position:absolute;
+  top:20%;
+  width:140px;
+  height:60px;
+  background:rgba(255,255,255,.25);
+  border-radius:50px;
+  filter:blur(6px);
+  animation:cloudMove 35s linear infinite;
+}
+
+.cloud::after{
+  content:"";
+  position:absolute;
+  width:80px;
+  height:80px;
+  background:rgba(255,255,255,.25);
+  border-radius:50%;
+  top:-30px;
+  left:20px;
+}
+
+.cloud1{left:-200px;animation-delay:0s}
+.cloud2{left:-300px;top:35%;animation-delay:10s}
+
+@keyframes cloudMove{
+  from{transform:translateX(0)}
+  to{transform:translateX(130vw)}
+}
+
+/* =====================
+   SCROLL INDICATOR
+===================== */
+.scroll-indicator{
+  position:absolute;
+  bottom:30px;
+  left:50%;
+  transform:translateX(-50%);
+  width:24px;
+  height:42px;
+  border:2px solid #fff;
+  border-radius:20px;
+}
+
+.scroll-indicator::after{
+  content:"";
+  position:absolute;
+  top:8px;
+  left:50%;
+  transform:translateX(-50%);
+  width:6px;
+  height:6px;
+  background:#fff;
+  border-radius:50%;
+  animation:scroll 1.6s infinite;
+}
+
+@keyframes scroll{
+  0%{opacity:1;top:8px}
+  100%{opacity:0;top:26px}
+}
+
+/* =====================
+   MOBILE FIX
+===================== */
 @media(max-width:768px){
   .hero h1{
     font-size:34px;
   }
 }
-
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <nav>
-  <a href="index.html">Home</a>
-  <a href="trips.html">Trip Plan</a>
-  <a href="places.html">Places</a>
-  <a href="contact.html">Contact</a>
-  <a href="gallery.html">Gallery</a>
-  <a href="rules.html">Rules</a>
+  <a href="/">Home</a>
+  <a href="/trips">Trip Plan</a>
+  <a href="/places">Places</a>
+  <a href="/gallery">Gallery</a>
+  <a href="/rules">Rules</a>
+  <a href="/contact">Contact</a>
 </nav>
 
-<!-- HERO -->
-<h<section class="hero">
-  <div class="hero-overlay"></div>
+<section class="hero">
 
-  <div class="hero-content">
-    <h1>Explore India <span>From Delhi</span></h1>
-    <p>Custom Tour Plans • Trusted Travel Experts • Best Prices</p>
-
-    <div class="hero-graphics">
-      <div class="glass-card">🏔️ Hill Trips</div>
-      <div class="glass-card">🏖️ Beach Tours</div>
-      <div class="glass-card">🏰 Heritage</div>
-      <div class="glass-card">❄️ Snow Destinations</div>
-    </div>
-
-    <a href="/trips" class="btn">View Trip Plan</a>
-  </div>
-</section>
-
-</section>
-
-<!-- SECTION 2 -->
-<section>
-  <div class="section-box">
-    <h2>Why Choose SnowTrail India?</h2>
-    <p>
-      ✔ Fixed curated routes<br>
-      ✔ Trusted travel partners<br>
-      ✔ Premium hotels & transport<br>
-      ✔ 24×7 travel support
-    </p>
-  </div>
-</section>
-<section>
-<div class="container">
-
-  <!-- CONTACT DETAILS -->
-  <div class="info">
-    <h2>Contact SnowTrail India</h2>
-    <p>
-      Plan your perfect trip from Delhi to India’s most beautiful destinations.
-      Get in touch with us for customised travel plans.
-    </p>
-
-    <div class="item"><strong>📞 Phone:</strong> +91 9671331075</div>
-    <div class="item"><strong>💬 WhatsApp:</strong> +91 9671331075</div>
-    <!-- WHATSAPP BUTTON -->
-<a href="https://wa.me/919671331075?text=Hi%20I%20want%20to%20plan%20a%20trip%20from%20Delhi"
-   class="whatsapp-btn"
-   target="_blank">
-  💬 WhatsApp Us
-</a>
-
-<style>
-.whatsapp-btn{
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  padding:16px 38px;
-  font-size:18px;
-  font-weight:600;
-  color:#ffffff;
-  background:linear-gradient(135deg,#25D366,#1ebe5d);
-  border-radius:50px;
-  text-decoration:none;
-  box-shadow:0 15px 40px rgba(37,211,102,.5);
-  transition:all .3s ease;
-}
-
-.whatsapp-btn:hover{
-  transform:translateY(-4px);
-  box-shadow:0 25px 60px rgba(37,211,102,.7);
-}
-</style>
-
-
-    <div class="item"><strong>📧 Email:</strong> bsmeena3107@@email.com</div>
-    <div class="item"><strong>📍 Location:</strong> Delhi, India</div>
-    <div class="item"><strong>⏰ Working Hours:</strong> 9 AM – 9 PM</div>
+  <!-- Floating Graphics -->
+  <div class="map-lines">
+    <span></span>
+    <span></span>
   </div>
 
-<footer>
-© 2026 SnowTrail India | Premium Travel Planner
-</footer>
+  <div class="cloud cloud1"></div>
+  <div class="cloud cloud2"></div>
+
+  <!-- Hero Content -->
+  <h1>Explore India <span>From Delhi</span></h1>
+  <p>Custom Tour Plans • Trusted Travel Experts • Best Prices</p>
+
+  <a href="/trips" class="btn">View Trip Plan</a>
+
+  <!-- Scroll Indicator -->
+  <div class="scroll-indicator"></div>
+
+</section>
 
 </body>
 </html>
-
-
-
